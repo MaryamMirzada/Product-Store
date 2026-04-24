@@ -3,10 +3,12 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import About from "../components/About";
+import DeliveryService from "../components/DeliveryService";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {" "}
@@ -26,16 +28,20 @@ const Home = () => {
             and modern shopping experience with us.
           </p>
           <div className="mt-6 flex gap-4">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+            <button
+              onClick={() => navigate("product")}
+              className="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-6 py-3 rounded-xl shadow-lg transition"
+            >
               Shop Now
             </button>
-            <button className="border border-white text-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
+            <button className="border cursor-pointer border-white text-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
               Learn More
             </button>
           </div>
         </div>
       </div>
-      <About />
+      <About id="about" />
+      <DeliveryService />
     </div>
   );
 };
