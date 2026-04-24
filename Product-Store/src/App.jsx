@@ -6,6 +6,7 @@ import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
+  // بروسر روت اینجه استفاده گردیده 
     <BrowserRouter>
       <Routes>
       
