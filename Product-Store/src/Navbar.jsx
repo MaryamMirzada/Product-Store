@@ -43,6 +43,13 @@ const Navbar = () => {
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-500 transition-all hover:w-full"></span>
           </Link>
           <Link
+            to="about"
+            className="relative font-medium hover:text-red-500 transition"
+          >
+            About
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-500 transition-all hover:w-full"></span>
+          </Link>
+          <Link
             to="/cart"
             className="relative flex items-center gap-1 hover:text-red-500 transition"
           >

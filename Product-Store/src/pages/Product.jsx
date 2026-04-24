@@ -23,8 +23,6 @@ const Product = () => {
       );
     }
   }, [data]);
-
-  // 🟡 Loading Skeleton
   if (isLoading) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
@@ -49,10 +47,7 @@ const Product = () => {
 
   return (
     <div className="p-6 lg:px-20">
-      {/* Title */}
       <h1 className="text-3xl font-bold mb-6 text-red-700">Our Products</h1>
-
-      {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visibleProducts.map((product, index) => (
           <div
@@ -60,10 +55,8 @@ const Product = () => {
             ref={(el) => (cardsRef.current[index] = el)}
             className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col justify-between hover:scale-[1.02]"
           >
-            {/* Image */}
-            <img src={product.image} className="h-44 object-contain mx-auto" />
 
-            {/* Info */}
+            <img src={product.image} className="h-44 object-contain mx-auto" />
             <div className="mt-4">
               <h2 className="font-semibold text-lg line-clamp-2">
                 {product.title}
@@ -73,8 +66,6 @@ const Product = () => {
                 ${product.price}
               </p>
             </div>
-
-            {/* Buttons */}
             <div className="mt-4 space-y-2">
               <button
                 onClick={() => dispatch(addToCart(product))}
@@ -82,7 +73,6 @@ const Product = () => {
               >
                 Add to Cart
               </button>
-
               <Link to={`/product/${product.id}`}>
                 <button className="w-full cursor-pointer border border-red-600 text-red-600 hover:bg-red-600 hover:text-white py-2 rounded-lg transition">
                   More Info
@@ -92,8 +82,6 @@ const Product = () => {
           </div>
         ))}
       </div>
-
-      {/* View More */}
       {visibleCount < data?.length && (
         <div className="text-center mt-10">
           <button

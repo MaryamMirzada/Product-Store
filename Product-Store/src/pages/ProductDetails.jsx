@@ -17,8 +17,6 @@ const ProductDetails = () => {
     queryKey: ["product", id],
     queryFn: () => fetchProduct(id),
   });
-
-  // 🔄 Loading Skeleton
   if (isLoading) {
     return (
       <div className="p-10 grid md:grid-cols-2 gap-10 animate-pulse">
@@ -48,8 +46,6 @@ const ProductDetails = () => {
             className="h-80 object-contain hover:scale-105 transition"
           />
         </div>
-
-   
         <div>
           <h1 className="text-3xl font-bold mb-3">{data.title}</h1>
 

@@ -1,39 +1,56 @@
+import { useNavigate } from "react-router-dom";
+
 const About = () => {
+  const navigate = useNavigate();
   return (
-    <div className="my-16 px-4 lg:px-20" id="about">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-red-600">About Our Store</h2>
-
-        <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
-          We are a modern online store dedicated to providing high-quality
-          products at the best prices. Our mission is to make shopping simple,
-          fast, and enjoyable for everyone.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="p-6 rounded-xl shadow hover:shadow-lg transition bg-white">
-          <h3 className="font-bold text-lg text-red-600 mb-2">Quality</h3>
-          <p className="text-gray-600 text-sm">
-            We ensure all products meet high quality standards.
-          </p>
+    <div className="my-20 px-4 lg:px-20" id="about">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="relative">
+          <img
+            src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a"
+            alt="about store"
+            className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
+          />
+          <div className="absolute bottom-5 left-5 bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow">
+            <p className="text-sm font-bold text-red-600">
+              Trusted Online Store
+            </p>
+          </div>
         </div>
-
-        <div className="p-6 rounded-xl shadow hover:shadow-lg transition bg-white">
-          <h3 className="font-bold text-lg text-red-600 mb-2">Fast Delivery</h3>
-          <p className="text-gray-600 text-sm">
-            Quick and reliable delivery to your doorstep.
+        <div>
+          <h2 className="text-4xl font-extrabold text-red-600 mb-4">
+            About Our Store
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            We are a modern e-commerce platform dedicated to delivering
+            high-quality products with the best prices. Our goal is to provide a
+            smooth, fast, and enjoyable shopping experience for every customer.
           </p>
-        </div>
+          <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="text-center p-3 bg-gray-100 rounded-lg">
+              <h3 className="text-xl font-bold text-red-600">10K+</h3>
+              <p className="text-sm text-gray-500">Products</p>
+            </div>
+            <div className="text-center p-3 bg-gray-100 rounded-lg">
+              <h3 className="text-xl font-bold text-red-600">5K+</h3>
+              <p className="text-sm text-gray-500">Customers</p>
+            </div>
+            <div className="text-center p-3 bg-gray-100 rounded-lg">
+              <h3 className="text-xl font-bold text-red-600">24/7</h3>
+              <p className="text-sm text-gray-500">Support</p>
+            </div>
+          </div>
 
-        <div className="p-6 rounded-xl shadow hover:shadow-lg transition bg-white">
-          <h3 className="font-bold text-lg text-red-600 mb-2">Support</h3>
-          <p className="text-gray-600 text-sm">
-            24/7 customer support for all your needs.
-          </p>
+          <button
+            onClick={() => navigate("about")}
+            className="bg-red-600 cursor-pointer hover:bg-red-700 text-white px-6 py-3 rounded-xl shadow transition"
+          >
+            Learn More
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
 export default About;

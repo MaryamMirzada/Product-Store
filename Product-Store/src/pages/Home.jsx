@@ -6,6 +6,9 @@ import gsap from "gsap";
 import { Link, useNavigate } from "react-router-dom";
 import About from "../components/About";
 import DeliveryService from "../components/DeliveryService";
+import FeaturedProducts from "../components/FeaturedProducts";
+import CustomerFeedback from "../components/CustomerFeedback";
+import Footer from "../Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -34,7 +37,8 @@ const Home = () => {
             >
               Shop Now
             </button>
-            <button className="border cursor-pointer border-white text-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
+            <button onClick={() => navigate('about')}
+             className="border cursor-pointer border-white text-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
               Learn More
             </button>
           </div>
@@ -42,6 +46,9 @@ const Home = () => {
       </div>
       <About id="about" />
       <DeliveryService />
+      <FeaturedProducts />
+      <CustomerFeedback />
+  
     </div>
   );
 };
