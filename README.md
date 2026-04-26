@@ -101,10 +101,10 @@ Clear entire cart with one click
 
 Screenshots
 Home Page
-[https://./screenshots/home.png](https://github.com/MaryamMirzada/Product-Store/blob/56b41fd503f2811f83eb57ff54ca5f591dd863c3/Product-Store/src/assets/home.png)
+https://github.com/MaryamMirzada/Product-Store/blob/56b41fd503f2811f83eb57ff54ca5f591dd863c3/Product-Store/src/assets/home.png)
 
 Demo Video
-[https://./video/UnixStore.MP4](https://drive.google.com/file/d/14rs-EXUf-QAfpta-_TftFot-4-GJw4_M/view?usp=drive_link)
+https://drive.google.com/file/d/14rs-EXUf-QAfpta-_TftFot-4-GJw4_M/view?usp=drive_link
 
 
 
