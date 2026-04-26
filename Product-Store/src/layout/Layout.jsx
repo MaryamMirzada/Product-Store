@@ -13,11 +13,11 @@ const Layout = () => {
 
   return (
     <div
-      className={
-        state.theme === "dark"
-          ? "bg-black text- min-h-screen"
-          : "bg-white text-black min-h-screen"
-      }
+      // className={
+      //   state.theme === "dark"
+      //     ? "bg-black text- min-h-screen"
+      //     : "bg-white text-black min-h-screen"
+      // }
     >
       <Navbar />
       <main>
