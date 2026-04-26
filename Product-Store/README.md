@@ -1,18 +1,110 @@
-# React + Vite
+# Product Story
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive e-commerce product store built with React.  
+This project demonstrates the practical use of **Context API + useReducer**, **Redux Toolkit**, and **React Query** together in one application.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse products with **Grid View** and **List View** layout switching
+- **Dark Mode / Light Mode** theme toggle
+- Shopping cart management (add, remove, update quantity, clear cart)
+- Product listing with loading and error states
+- Product details page
+- Responsive design with **Tailwind CSS**
+- Persistent theme preference (bonus)
 
-## React Compiler
+## Pages
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+1. **Home** – Company info, shipping details, featured products, customer feedback
+2. **Products** – Product cards with image, short info, "More Info" and "Details" buttons, layout switcher (Grid/List)
+3. **About** – Information about the store
+4. **Cart** – Display cart items, update quantities, show total items and total price, clear cart option
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Technology          | Purpose                                                |
+| ------------------- | ------------------------------------------------------ |
+| React               | UI library                                             |
+| React Router DOM    | Routing between pages                                 |
+| Tailwind CSS        | Styling and responsive design                         |
+| React Query         | Fetching and caching product data from API            |
+| Context API + useReducer | Global state for theme and layout settings       |
+| Redux Toolkit       | Shopping cart state management                        |
+| JSON Server (or similar) | Mock API for product data                          |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## State Management Approach
+
+| State Type          | Tool Used               | Responsibility                        |
+| ------------------- | ----------------------- | ------------------------------------- |
+| App settings        | Context API + useReducer| Theme (dark/light), layout (grid/list)|
+| Shopping cart       | Redux Toolkit           | Cart items, quantities, totals        |
+| Server state        | React Query             | Product fetching, caching, loading/error |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/product-story.git
+cd product-story
+Install dependencies
+
+bash
+npm install
+Start the JSON server (if using mock API)
+
+bash
+npx json-server --watch db.json --port 5000
+Start the React development server
+
+bash
+npm start
+The app will open at http://localhost:3000
+
+Folder Structure (Suggested)
+text
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   ├── LayoutSwitcher.jsx
+│   └── ThemeToggle.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Products.jsx
+│   ├── About.jsx
+│   └── Cart.jsx
+├── context/
+│   └── SettingsContext.jsx (Theme + Layout)
+├── redux/
+│   ├── store.js
+│   └── cartSlice.js
+├── hooks/
+│   └── useProducts.js (React Query)
+├── App.jsx
+└── index.js
+How to Use
+Switch between Grid and List view on the Products page
+
+Toggle Dark/Light Mode from the navbar
+
+Add products to cart
+
+Go to Cart page to update quantities or remove items
+
+Clear entire cart with one click
+
+Screenshots
+
+### Home Page
+![Home Page](/Product-Store/src/assets/home.png)
+
+Demo Video
+[Project Demo](/Product-Store/src/video/Product%20story.mp4)

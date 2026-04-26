@@ -24,7 +24,7 @@ const Navbar = () => {
           to="/"
           className="text-2xl font-extrabold text-red-600 tracking-wide hover:scale-105 transition"
         >
-          Parwan Store
+          Product Store
         </Link>
 
         {/* Menu */}
