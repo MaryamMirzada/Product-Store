@@ -65,30 +65,30 @@ Start the React app
 
 bash
 npm start
-Folder Structure
-text
-src/
-├── components/
-│   ├── About.jsx
-│   ├── CustomerFeedback.jsx
-│   ├── DeliveryService.jsx
-│   ├── FeatureProduct.jsx
-│   └── Setting.jsx
-├── pages/
-│   ├── Home.jsx
-│   ├── Product.jsx
-│   ├── About.jsx
-│   ├── Cart.jsx
-│   └── ProductDetail.jsx
-├── context/
-│   └── SettingsContext.jsx
-├── redux/
-│   └── store.js
-├── hooks/
-│   └── useProducts.js
-├── App.jsx
-└── index.js
-How to Use
+
+## Folder Structure
+product-story/
+│
+├── src/
+│ ├── assets/ # Images and icons
+│ ├── components/
+│ │ ├── common/ # Navbar, ThemeToggle, LayoutSwitcher
+│ │ ├── home/ # CustomerFeedback, DeliveryService, FeatureProduct
+│ │ ├── products/ # ProductCard, ProductList, ProductDetail
+│ │ └── cart/ # CartItem
+│ ├── pages/ # Home, Products, About, Cart
+│ ├── context/ # SettingsContext + Reducer
+│ ├── redux/ # Store + cartSlice
+│ ├── hooks/ # useProducts (React Query)
+│ ├── services/ # API calls
+│ ├── utils/ # Constants, helpers
+│ └── styles/ # Global CSS
+│
+├── screenshots/ # App screenshots
+├── videos/ # Demo video
+└── README.md
+
+## How to Use
 Switch between Grid and List view on the Products page
 
 Toggle Dark/Light Mode from the navbar
@@ -101,10 +101,10 @@ Clear entire cart with one click
 
 Screenshots
 Home Page
-https://./screenshots/home.png
+[https://./screenshots/home.png](https://github.com/MaryamMirzada/Product-Store/blob/56b41fd503f2811f83eb57ff54ca5f591dd863c3/Product-Store/src/assets/home.png)
 
 Demo Video
-Click here to watch the demo video
+[Click here to watch the demo video](https://github.com/MaryamMirzada/Product-Store/blob/56b41fd503f2811f83eb57ff54ca5f591dd863c3/Product-Store/src/video/Product%20story.mp4)
 
 Note: If the video doesn't play directly in GitHub, download it or upload to YouTube and add the link here.
 
