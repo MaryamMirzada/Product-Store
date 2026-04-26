@@ -104,7 +104,7 @@ Home Page
 [https://./screenshots/home.png](https://github.com/MaryamMirzada/Product-Store/blob/56b41fd503f2811f83eb57ff54ca5f591dd863c3/Product-Store/src/assets/home.png)
 
 Demo Video
-[https://./video/ParwanStore.png](https://github.com/MaryamMirzada/Product-Store/blob/main/Product-Store/src/video/productStore.mp4)
+[https://./video/UnixStore.MP4](https://github.com/MaryamMirzada/Product-Store/blob/main/Product-Store/src/video/productStore.mp4)
 
-Note: If the video doesn't play directly in GitHub, download it or upload to YouTube and add the link here.
+
 
