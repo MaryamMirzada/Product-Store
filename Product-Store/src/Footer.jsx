@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* BRAND */}
           <div>
-            <h2 className="text-2xl font-bold text-red-500">Parwan Store</h2>
+            <h2 className="text-2xl font-bold text-red-500">Unix Store</h2>
 
             <p
               className={`mt-4 text-sm leading-relaxed ${
@@ -98,7 +98,7 @@ const Footer = () => {
               : "border-gray-200 text-gray-500"
           }`}
         >
-          © {new Date().getFullYear()} Parwan Store. All rights reserved.
+          © {new Date().getFullYear()} Unix Store. All rights reserved.
         </div>
       </div>
     </footer>
