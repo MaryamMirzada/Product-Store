@@ -42,17 +42,9 @@ This project demonstrates the practical use of **Context API + useReducer**, **R
 
 ## Getting Started
 
-### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+## Folder Structure (Suggested)
 
-### Installation
-
-
-
-Folder Structure (Suggested)
-text
 src/
 ├── components/
 │   ├── About.jsx
@@ -74,21 +66,19 @@ src/
 │   └── useProducts.js (React Query)
 ├── App.jsx
 └── index.js
-How to Use
+
+## How to Use
+
 Switch between Grid and List view on the Products page
-
 Toggle Dark/Light Mode from the navbar
-
 Add products to cart
-
 Go to Cart page to update quantities or remove items
-
 Clear entire cart with one click
 
 Screenshots
 
 ### Home Page
-![Home Page](/Product-Store/src/assets/home.png)
+![Home Page](C:\Users\DELL\Desktop\React CTI\React homework\Product Store\Product-Store\src\assets\home.png)
 
 Demo Video
-[Project Demo](/Product-Store/src/video/Product%20story.mp4)
+[Project Demo](Product-Store\src\video\Product story.mp4)
