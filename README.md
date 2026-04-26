@@ -42,43 +42,69 @@ This project demonstrates the practical use of **Context API + useReducer**, **R
 
 ## Getting Started
 
+### Prerequisites
 
-## Folder Structure (Suggested)
+- Node.js (v16 or higher)
+- npm or yarn
 
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/product-story.git
+   cd product-story
+Install dependencies
+
+bash
+npm install
+Start the JSON server
+
+bash
+npx json-server --watch db.json --port 5000
+Start the React app
+
+bash
+npm start
+Folder Structure
+text
 src/
 ├── components/
 │   ├── About.jsx
 │   ├── CustomerFeedback.jsx
 │   ├── DeliveryService.jsx
-│   └──FeatureProduct.jsx
-│   └──Setting.jsx
+│   ├── FeatureProduct.jsx
+│   └── Setting.jsx
 ├── pages/
 │   ├── Home.jsx
 │   ├── Product.jsx
 │   ├── About.jsx
-│   └── Cart.jsx
+│   ├── Cart.jsx
 │   └── ProductDetail.jsx
 ├── context/
-│   └── SettingsContext.jsx (Theme + Layout)
+│   └── SettingsContext.jsx
 ├── redux/
-│   ├── store.js
+│   └── store.js
 ├── hooks/
-│   └── useProducts.js (React Query)
+│   └── useProducts.js
 ├── App.jsx
 └── index.js
-
-## How to Use
-
+How to Use
 Switch between Grid and List view on the Products page
+
 Toggle Dark/Light Mode from the navbar
+
 Add products to cart
+
 Go to Cart page to update quantities or remove items
+
 Clear entire cart with one click
 
 Screenshots
-
-### Home Page
-![Home Page](C:\Users\DELL\Desktop\React CTI\React homework\Product Store\Product-Store\src\assets\home.png)
+Home Page
+https://./screenshots/home.png
 
 Demo Video
-[Project Demo](Product-Store\src\video\Product story.mp4)
+Click here to watch the demo video
+
+Note: If the video doesn't play directly in GitHub, download it or upload to YouTube and add the link here.
+
