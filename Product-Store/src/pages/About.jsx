@@ -9,13 +9,13 @@ const About = () => {
 
   return (
     <div
-      className={`my-20 px-4 lg:px-20 py-16 transition-all duration-300 ${
+      className={`px-4 lg:px-20 py-16 transition-all duration-300 ${
         state.darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
       id="about"
     >
+      {/* TOP SECTION */}
       <div className="grid md:grid-cols-2 gap-10 items-center">
-        {/* LEFT */}
         <div>
           <h1 className="text-5xl font-extrabold text-red-600 leading-tight">
             About Our Store
@@ -27,8 +27,8 @@ const About = () => {
             }`}
           >
             We are a modern e-commerce platform dedicated to providing
-            high-quality products at the best prices. Our mission is to make
-            online shopping simple, fast, and enjoyable for everyone.
+            high-quality products at the best prices. Our goal is to make
+            shopping fast, easy, and enjoyable for everyone.
           </p>
 
           <button
@@ -39,29 +39,22 @@ const About = () => {
           </button>
         </div>
 
-        {/* RIGHT */}
+        {/* IMAGE */}
         <div>
           <img
             src="https://www.thoughtco.com/thmb/ctxxtfGGeK5f_-S3f8J-jbY-Gp8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-clothes-hanging-in-row-739240657-5a78b11f8e1b6e003715c0ec.jpg"
             className="rounded-2xl shadow-xl object-cover w-full h-[350px]"
-            alt="store"
           />
         </div>
       </div>
 
-      {/* WHY US TITLE */}
+      {/* TITLE */}
       <div className="mt-20 text-center">
-        <h2
-          className={`text-3xl font-bold ${
-            state.darkMode ? "text-white" : "text-gray-800"
-          }`}
-        >
-          Why Choose Us?
-        </h2>
+        <h2 className="text-3xl font-bold">Why Choose Us?</h2>
 
         <p
           className={`mt-3 max-w-2xl mx-auto ${
-            state.darkMode ? "text-gray-400" : "text-gray-500"
+            state.darkMode ? "text-gray-300" : "text-gray-500"
           }`}
         >
           We focus on quality, trust, and customer satisfaction.
@@ -69,21 +62,21 @@ const About = () => {
       </div>
 
       {/* CARDS */}
-      <div className="grid md:grid-cols-3 gap-6 mt-10">
+      <div className="grid md:grid-cols-3 gap-8 mt-10">
         {WhyUs.map((data, index) => (
           <div
             key={index}
-            className={`p-6 rounded-2xl shadow hover:shadow-xl transition ${
+            className={`p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border hover:scale-[1.03] ${
               state.darkMode
-                ? "bg-gray-900 border border-gray-700"
-                : "bg-white border border-gray-200"
+                ? "bg-gray-900 border-gray-700"
+                : "bg-white border-gray-100"
             }`}
           >
-            <h3 className="text-xl font-bold text-red-600">{data.name}</h3>
+            <h3 className="text-xl font-bold text-red-600 mb-2">{data.title}</h3>
 
             <p
-              className={`mt-3 text-sm ${
-                state.darkMode ? "text-gray-400" : "text-gray-600"
+              className={`text-sm leading-relaxed ${
+                state.darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
               {data.decs}

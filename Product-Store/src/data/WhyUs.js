@@ -10,6 +10,6 @@ const WhyUs = [{
 }, {
     id: 3,
     title: 'Support',
-    desc: '24/7 customer support for all your needs.'
+    decs: '24/7 customer support for all your needs.'
 }]
 export default WhyUs

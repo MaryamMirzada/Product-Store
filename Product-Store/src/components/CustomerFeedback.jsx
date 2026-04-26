@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { ThemeContext } from "../theme/ThemeContext";
+
 const CustomerFeedback = () => {
+  const { state } = useContext(ThemeContext);
+
   const reviews = [
     {
       id: 1,
@@ -24,32 +29,67 @@ const CustomerFeedback = () => {
   ];
 
   return (
-    <div className="my-24 px-4 lg:px-20">
+    <div
+      className={`mt-24 pb-24 px-4 lg:px-20 transition-all duration-300 ${
+        state.darkMode ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
+      {/* TITLE */}
       <div className="text-center mb-14">
         <h2 className="text-4xl font-extrabold text-red-600">
           Customer Feedback
         </h2>
-        <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+
+        <p
+          className={`mt-4 max-w-2xl mx-auto ${
+            state.darkMode ? "text-gray-300" : "text-gray-500"
+          }`}
+        >
           What our happy customers say about us.
         </p>
       </div>
+
+      {/* REVIEWS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="bg-white shadow-md hover:shadow-2xl transition rounded-2xl p-6 text-center border border-gray-100"
+            className={`shadow-md hover:shadow-2xl transition rounded-2xl p-6 text-center border ${
+              state.darkMode
+                ? "bg-gray-900 border-gray-700"
+                : "bg-white border-gray-100"
+            }`}
           >
+            {/* IMAGE */}
             <div className="flex justify-center mb-4">
               <img
                 src={review.image}
                 className="w-20 h-20 rounded-full object-cover border-4 border-red-500"
               />
             </div>
-            <h3 className="font-bold text-lg text-gray-800">{review.name}</h3>
+
+            {/* NAME */}
+            <h3
+              className={`font-bold text-lg ${
+                state.darkMode ? "text-white" : "text-gray-800"
+              }`}
+            >
+              {review.name}
+            </h3>
+
+            {/* RATING */}
             <div className="text-yellow-400 mt-2">
               {"⭐".repeat(review.rating)}
             </div>
-            <p className="text-gray-600 text-sm mt-4">"{review.comment}"</p>
+
+            {/* COMMENT */}
+            <p
+              className={`text-sm mt-4 ${
+                state.darkMode ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              "{review.comment}"
+            </p>
           </div>
         ))}
       </div>
